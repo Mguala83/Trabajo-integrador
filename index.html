@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="stylesheet" href="styless.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <!-- AlpineJS para gestionar el evento Clic -->
+<script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+<!-- Header -->
+<header x-data="{ open: false }" class="header">
+  <!-- Logo -->
+  <div class="header__logo">
+    <img src="./assets/logo2.png" alt="">
+  </div>
+  <!-- Boton abrir -->
+  <button class="header__button-nav--open" x-on:click="open = true"><img src="./assets/menu.svg" alt=""></button>
+  <!-- Navegador -->
+  <nav class="nav" x-bind:class="open ? 'nav--show' : ''">
+    <!-- Boton cerrar -->
+    <div class="nav__button" x-on:click="open = false">
+      <button class="header__button-nav--close"><img src="./assets/menu.svg" alt=""></button>
+    </div>
+    <!-- Menu -->
+    <ul class="nav__ul">
+      <li class="nav__item"><a href="#" class="nav__link">Inicio</a></li>
+      <li class="nav__item"><a href="#" class="nav__link">Sobre Nosotros</a></li>
+      <li class="nav__item"><a href="#" class="nav__link">Servicios</a></li>
+      <li class="nav__item"><a href="#" class="nav__link">Contacto</a></li>
+    </ul>
+  </nav>
+  <!-- Fin Navegador -->
+</header>
+<!-- Fin Header -->
+
+<section id="hero">
+  <div class="hero-info">
+    <h2>Todas tus soluciones web en un solo lugar</h2>
+    <p>
+      Somos una empresa jóven y con nuevas ideas, le ofrecemos a cada uno de nuestros clientes un asesoramiento espcializado y planes de negocios a medidia
+    </p>
+  </div>
+  <img
+    src="./assets/imagenhero.jpg" 
+    alt="Big House Image"
+  />
+</section>
+
+<section id="info-cards">
+  <h2>Nuestros servicios</h2>
+  
+  <div class="info-cards-container">
+    <div class="card">
+      <img
+        src="./assets/ahorar.png"
+        alt="Icono Estrella"
+      />
+      <h3>Trabajos a medida</h3>
+      <p>
+        Cubrimos todas sus necesidades en línea, al precio más competitivo del mercado
+      </p>
+    </div>
+
+    <div class="card">
+      <img
+        src="./assets/asesoramiento.jpg"
+        alt="Icono Asesor "
+      />
+      <h3>Plazos de entrega de excelencia</h3>
+      <p>
+        Nos centramos en que cada cliente tenga el mejor trabajo en el menor tiempo posible
+      </p>
+    </div>
+
+    <section class="card">
+      <img
+        src="./assets/atencion.png"
+        alt="Icono Seguridad"
+      />
+      <h3>Soporte los 365 días de año</h3>
+      <p>
+        Contamos con soporte en líena los 365 días del año, brindandóle a cada cliente, todos los medios posibles para resolver sus inquitudes en un corto plazo
+      </p>
+    
+    </div>
+
+  </section>
+
+
+    
+</body>
+</html>
